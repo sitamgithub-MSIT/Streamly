@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
+import Rightbar from "../components/Rightbar";
 
 interface IWrapper {
   children: React.ReactNode;
@@ -23,6 +24,7 @@ const Wrapper = ({ children, enableRightbar }: IWrapper) => {
       >
         <Navbar onMenuClick={() => setOpenSidebar(!openSidebar)} />
         <div className="p-4">{children}</div>
+        {enableRightbar && <Rightbar />}
       </main>
     </>
   );
