@@ -1,5 +1,14 @@
+import { UserProfile, SignedIn } from "@clerk/clerk-react";
+import Wrapper from "../components/Wrapper";
+
 const ProfilePage = () => {
-  return <div>ProfilePage</div>;
+  return (
+    <Wrapper>
+      <SignedIn>
+        <UserProfile />
+      </SignedIn>
+    </Wrapper>
+  );
 };
 
 export default ProfilePage;

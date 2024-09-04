@@ -1,5 +1,7 @@
+import Wrapper from "../components/Wrapper";
+
 const SchedulePage = () => {
-  return <div>SchedulePage</div>;
+  return <Wrapper>SchedulePage</Wrapper>;
 };
 
 export default SchedulePage;
