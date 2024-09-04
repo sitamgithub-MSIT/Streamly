@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Eye, Video } from "lucide-react";
-import { gamesStreams } from "../source";
+import { gamesStreams, streamers } from "../source";
 
 const Rightbar = () => {
   return (
@@ -38,6 +38,24 @@ const Rightbar = () => {
                 <h4 className="text-sm">{game.name}</h4>
               </div>
               <div className="absolute top-0 left-0 z-10 w-full h-full bg-dark-overlay" />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="py-4">
+        <h3 className="text-gray-500">Popular Streamers</h3>
+        <div className="mt-4">
+          {streamers.map((streamer, index) => (
+            <div className="flex items-center gap-2 my-3" key={index}>
+              <div className="size-10 overflow-hidden rounded-full">
+                <img src={streamer.image} alt="" />
+              </div>
+              <div>
+                <h3 className="text-base">{streamer.name}</h3>
+                <p className="text-sm text-gray-500">
+                  {streamer.followers} Followers
+                </p>
+              </div>
             </div>
           ))}
         </div>

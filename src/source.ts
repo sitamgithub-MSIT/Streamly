@@ -1,4 +1,14 @@
-import { game1, game2, game3, game4 } from "./assets";
+import {
+  game1,
+  game2,
+  game3,
+  game4,
+  streamer1,
+  streamer2,
+  streamer3,
+  streamer4,
+  streamer5,
+} from "./assets";
 
 export const gamesStreams = [
   {
@@ -20,5 +30,33 @@ export const gamesStreams = [
     name: "Karine",
     image: game4,
     watching: "2k",
+  },
+];
+
+export const streamers = [
+  {
+    name: "Pink Floyd",
+    image: streamer1,
+    followers: "12k",
+  },
+  {
+    name: "Vinicius Ramos",
+    image: streamer2,
+    followers: "10.2k",
+  },
+  {
+    name: " Emily Johnson",
+    image: streamer3,
+    followers: "20.5k",
+  },
+  {
+    name: "Kevin Smith",
+    image: streamer4,
+    followers: "15k",
+  },
+  {
+    name: "Marc Polo",
+    image: streamer5,
+    followers: "25k",
   },
 ];
