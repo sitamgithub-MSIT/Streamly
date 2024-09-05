@@ -38,7 +38,7 @@ const HomePage = () => {
           <div>
             <h3 className="text-base">Streamly live</h3>
             <p className="text-gray-500 text-sm">
-              Join live and also create your stream
+              Join live and create your own stream.
             </p>
           </div>
         </div>
