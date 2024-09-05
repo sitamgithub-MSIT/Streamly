@@ -2,7 +2,6 @@ import {
   banner1,
   banner2,
   banner3,
-  banner4,
   game1,
   game2,
   game3,
@@ -74,8 +73,5 @@ export const topStreams = [
   },
   {
     image: banner3,
-  },
-  {
-    image: banner4,
   },
 ];
