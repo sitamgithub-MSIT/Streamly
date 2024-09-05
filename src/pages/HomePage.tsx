@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import Wrapper from "../components/Wrapper";
-import { topStreams } from "../source";
+import { streams, topStreams } from "../source";
 import { banner4 } from "../assets";
+import { Eye } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -50,6 +51,35 @@ const HomePage = () => {
             Create Account
           </Link>
         </SignedOut>
+      </div>
+      <div className="pt-8">
+        <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 sm:gap-4">
+          {streams.map((stream, index) => (
+            <div className="bg-bgsecondary p-3 rounded-lg" key={index}>
+              <div className="overflow-hidden rounded-lg">
+                <img
+                  src={stream.image}
+                  alt=""
+                  className="transition-all hover:scale-110"
+                />
+              </div>
+              <p className="py-2">
+                <h3 className="text-sm line-clamp-2">{stream.title}</h3>
+                <div className="flex items-center justify-between gap-1 mt-3 max-[400px]:flex-col max-[400px]:items-start">
+                  <div className="flex items-center gap-2">
+                    <Eye className="text-primary" size={16} />
+                    <span className="text-sm text-gray-500">
+                      {stream.watching} watching
+                    </span>
+                  </div>
+                  <span className="py-1 px-3 bg-primary text-sm rounded-lg">
+                    live
+                  </span>
+                </div>
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </Wrapper>
   );

@@ -6,6 +6,12 @@ import {
   game2,
   game3,
   game4,
+  stream1,
+  stream2,
+  stream3,
+  stream4,
+  stream5,
+  stream6,
   streamer1,
   streamer2,
   streamer3,
@@ -73,5 +79,38 @@ export const topStreams = [
   },
   {
     image: banner3,
+  },
+];
+
+export const streams = [
+  {
+    title: "Medieval Warrior: The Armored Knight",
+    image: stream1,
+    watching: "11.5k",
+  },
+  {
+    title: "Concert Euphoria: Live Music Experience",
+    image: stream2,
+    watching: "13.2k",
+  },
+  {
+    title: "Desert Serenity: Camel at Rest",
+    image: stream3,
+    watching: "15k",
+  },
+  {
+    title: "Cinemaniac: Vintage Film Enthusiasts",
+    image: stream4,
+    watching: "12k",
+  },
+  {
+    title: "Futuristic Warfare: Soldiers in Combat",
+    image: stream5,
+    watching: "21.5k",
+  },
+  {
+    title: "Studio Spotlight: Behind the Camera",
+    image: stream6,
+    watching: "25k",
   },
 ];
