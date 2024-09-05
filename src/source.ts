@@ -1,4 +1,8 @@
 import {
+  banner1,
+  banner2,
+  banner3,
+  banner4,
   game1,
   game2,
   game3,
@@ -58,5 +62,20 @@ export const streamers = [
     name: "Marc Polo",
     image: streamer5,
     followers: "25k",
+  },
+];
+
+export const topStreams = [
+  {
+    image: banner1,
+  },
+  {
+    image: banner2,
+  },
+  {
+    image: banner3,
+  },
+  {
+    image: banner4,
   },
 ];
