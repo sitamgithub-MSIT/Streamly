@@ -2,12 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { SignedOut } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
+import { Eye } from "lucide-react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import Wrapper from "../components/Wrapper";
 import { streams, topStreams } from "../source";
 import { banner4 } from "../assets";
-import { Eye } from "lucide-react";
 
 const HomePage = () => {
   return (
