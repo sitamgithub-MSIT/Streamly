@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import generateUniqueId from "generate-unique-id";
 import { Eye, Video } from "lucide-react";
 import { gamesStreams, streamers } from "../source";
 
@@ -7,7 +8,9 @@ const Rightbar = () => {
     <div className="hidden min-[1150px]:block fixed top-0 right-0 w-[300px] h-screen bg-bgsecondary p-4">
       <div>
         <Link
-          to={""}
+          to={`/dashboard/golive?roomID=${generateUniqueId({
+            length: 6,
+          })}&role=Host`}
           className="flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-primary to-blue-600 rounded-full"
         >
           <Video />

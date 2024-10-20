@@ -1,3 +1,4 @@
+import generateUniqueId from "generate-unique-id";
 import { Home, User, CalendarCheck, Video, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../components/Logo";
@@ -27,11 +28,15 @@ const routes = [
     activePaths: ["/dashboard/schedule"],
   },
   {
-    path: "/dashboard/golive",
+    path: `/dashboard/golive?roomID=${generateUniqueId({
+      length: 6,
+    })}&role=Host`,
     label: "Go live",
     icon: Video,
     target: "_blank",
-    activePaths: ["/dashboard/golive"],
+    activePaths: [
+      `/dashboard/golive?roomID=${generateUniqueId({ length: 6 })}&role=Host`,
+    ],
   },
 ];
 

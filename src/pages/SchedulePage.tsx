@@ -186,7 +186,7 @@ const SchedulePage = () => {
                 </div>
                 {schedule.date === moment().format("MM-DD-YYYY") ? (
                   <Link
-                    to={""}
+                    to={`/dashboard/golive?roomID=${schedule.scheduleId}&role=Host`}
                     target="_blank"
                     className="block w-full bg-gradient-to-r from-primary to-blue-600 py-2 px-4 rounded-lg mt-4 text-center"
                   >
