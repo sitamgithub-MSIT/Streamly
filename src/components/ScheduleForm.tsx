@@ -60,8 +60,9 @@ const ScheduleForm = ({
 
   const createSchedule = async () => {
     setError("");
-    if (!data.date) setError("Date is required");
-    if (!data.time) setError("Time is required");
+    if (!data.title) return setError("Title is required");
+    if (!data.date) return setError("Date is required");
+    if (!data.time) return setError("Time is required");
 
     let upload = {
       ...data,

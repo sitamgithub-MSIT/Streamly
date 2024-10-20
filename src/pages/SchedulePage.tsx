@@ -176,7 +176,7 @@ const SchedulePage = () => {
                 </div>
                 <h2>{schedule.title}</h2>
                 <p className="text-sm text-gray-500 line-clamp-3">
-                  {schedule.title}
+                  {schedule.description}
                 </p>
                 <div className="flex items-center text-sm">
                   <span className="text-gray-500">Date:</span> {schedule.date}
