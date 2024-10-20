@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Delete, Edit, EllipsisVertical, ShieldPlus } from "lucide-react";
-import Wrapper from "../components/Wrapper";
-import ScheduleForm from "../components/ScheduleForm";
+import { Link } from "react-router-dom";
+import moment from "moment";
+import { Bounce, toast } from "react-toastify";
 import { useUser } from "@clerk/clerk-react";
 import {
   collection,
@@ -12,8 +13,8 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "../config/firebase";
-import { Link } from "react-router-dom";
-import moment from "moment";
+import Wrapper from "../components/Wrapper";
+import ScheduleForm from "../components/ScheduleForm";
 
 const SchedulePage = () => {
   const [schedules, setSchedules] = useState<any>([]);
@@ -53,6 +54,37 @@ const SchedulePage = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const copyStreamDetails = async (
+    type: "Cohost" | "Audience",
+    schedule: any
+  ) => {
+    const { scheduleId, title, date, time, description } = schedule || {};
+    let url =
+      window.location.origin +
+      "/dashboard/golive?roomID=" +
+      scheduleId +
+      "&role=" +
+      type;
+    navigator.clipboard.writeText(`
+      Event: ${title}
+      Description: ${description}
+      Date: ${date}
+      Time: ${time}
+      Link: ${url}
+    `);
+    toast.success(type + " stream details copied!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
   };
 
   return (
@@ -129,13 +161,13 @@ const SchedulePage = () => {
                     <ul className="absolute top-full right-0 hidden group-hover:block bg-bgprimary p-2 rounded-lg text-gray-500 w-[130px] text-sm text-center">
                       <li
                         className="py-2 hover:text-primary"
-                        onClick={() => {}}
+                        onClick={() => copyStreamDetails("Cohost", schedule)}
                       >
                         Invite Co-host
                       </li>
                       <li
                         className="py-2 hover:text-primary"
-                        onClick={() => {}}
+                        onClick={() => copyStreamDetails("Audience", schedule)}
                       >
                         Invite Audience
                       </li>
