@@ -12,6 +12,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.4.5",
     "@clerk/themes": "^2.1.24",
+    "@zegocloud/zego-uikit-prebuilt": "^2.11.0",
     "dotenv": "^16.4.5",
     "firebase": "^10.13.1",
     "generate-unique-id": "^2.0.3",
