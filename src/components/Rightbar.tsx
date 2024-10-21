@@ -11,6 +11,7 @@ const Rightbar = () => {
           to={`/dashboard/golive?roomID=${generateUniqueId({
             length: 6,
           })}&role=Host`}
+          target="_blank"
           className="flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-primary to-blue-600 rounded-full"
         >
           <Video />
