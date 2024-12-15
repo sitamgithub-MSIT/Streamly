@@ -23,7 +23,7 @@ Open your local host to view the web application in your browser at `http://loca
 
 ## Results
 
-To see results regarding demo, please refer to the `public` folder in the repository.
+To see results regarding the demo, please refer to the `public` folder in the repository.
 
 ## Contributing
 
