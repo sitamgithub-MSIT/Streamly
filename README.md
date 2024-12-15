@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+# Streamly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Streamly is a web application built for live streaming and content scheduling. It provides features for user authentication, profile management, scheduling streams, and going live.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **HTML**: Standard markup language for creating web pages.
+- **Tailwind CSS**: Utility-first CSS framework for styling web applications.
+- **JavaScript**: High-level programming language for building web applications.
+- **TypeScript**: Superset of JavaScript that adds static types to the language.
+- **React**: JavaScript library for building user interfaces.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To get started with this project, follow the steps below:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository: `git clone https://github.com/sitamgithub-MSIT/Streamly.git`
+2. Change the directory: `cd Streamly`
+3. Install the required dependencies: `npm install`
+4. Run the application: `npm run dev`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Open your local host to view the web application in your browser at `http://localhost:5173/`.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Results
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To see results regarding demo, please refer to the `public` folder in the repository.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please raise an issue to discuss the changes you would like to make. Once the changes are approved, you can create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+If you have any questions or suggestions regarding the project, feel free to reach out to me on my GitHub profile.
+
+Happy coding! 🚀
